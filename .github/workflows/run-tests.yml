@@ -89,9 +89,17 @@ jobs:
           path: target/karate-reports/
           retention-days: 30
 
-      # Step 7 — Publish the Karate report to GitHub Pages
+      # Step 7 — Create index.html to redirect root URL to Karate summary report
+      # Allows accessing the report without specifying the filename in the URL
+      # https://omontielc.github.io/automation-framework-back_karate → redirects to karate-summary.html
+      - name: Create index redirect
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo '<meta http-equiv="refresh" content="0; url=karate-summary.html">' > target/karate-reports/index.html
+
+      # Step 8 — Publish the Karate report to GitHub Pages
       # Only runs on push to main, not on pull requests
-      # Report available at: https://omontielc.github.io/automation-framework-back-karate
+      # Report available at: https://omontielc.github.io/automation-framework-back_karate
       - name: Deploy report to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
