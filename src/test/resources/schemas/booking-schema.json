@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Booking Schema",
+  "type": "object",
+  "required": ["firstname", "lastname", "totalprice", "depositpaid", "bookingdates"],
+  "properties": {
+    "firstname": {
+      "type": "string",
+      "description": "First name of the guest"
+    },
+    "lastname": {
+      "type": "string",
+      "description": "Last name of the guest"
+    },
+    "totalprice": {
+      "type": "integer",
+      "description": "Total price of the booking"
+    },
+    "depositpaid": {
+      "type": "boolean",
+      "description": "Whether the deposit has been paid"
+    },
+    "bookingdates": {
+      "type": "object",
+      "description": "Check-in and check-out dates",
+      "required": ["checkin", "checkout"],
+      "properties": {
+        "checkin": {
+          "type": "string",
+          "format": "date",
+          "description": "Check-in date in YYYY-MM-DD format"
+        },
+        "checkout": {
+          "type": "string",
+          "format": "date",
+          "description": "Check-out date in YYYY-MM-DD format"
+        }
+      }
+    },
+    "additionalneeds": {
+      "type": "string",
+      "description": "Any additional needs of the guest"
+    }
+  }
+}

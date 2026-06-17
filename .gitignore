@@ -1,0 +1,21 @@
+# Maven build output — generated automatically, never commit
+target/
+
+# IntelliJ IDEA project files — specific to each developer's machine
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Mac OS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Karate reports — generated on each test run
+karate-reports/
+
+# Log files
+*.log
+logs/

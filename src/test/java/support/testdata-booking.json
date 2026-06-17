@@ -1,0 +1,15 @@
+{
+  "ATC02_Booking": {
+    "FirstName":       "Osiris",
+    "LastName":        "Montiel",
+    "TotalPrice":      150,
+    "DepositPaid":     true,
+    "Checkin":         "2025-06-01",
+    "Checkout":        "2025-06-10",
+    "NewCheckin":      "2025-07-01",
+    "NewCheckout":     "2025-07-10",
+    "AdditionalNeeds": "Breakfast",
+    "Username":        "admin",
+    "Password":        "password123"
+  }
+}
