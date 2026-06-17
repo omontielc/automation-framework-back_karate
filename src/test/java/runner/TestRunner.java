@@ -17,19 +17,19 @@ class TestRunner {
         return Karate.run("classpath:api");
     }
 
-    /**
-     * Executes specific functional features related to the Booking module.
-     */
-    @Karate.Test
-    Karate runBooking() {
-        return Karate.run("classpath:api/booking");
-    }
-
-    /**
-     * Executes specific functional features related to the Posts module.
-     */
-    @Karate.Test
-    Karate runPosts() {
-        return Karate.run("classpath:api/posts");
-    }
+//    /**
+//     * Executes specific functional features related to the Booking module.
+//     */
+//    @Karate.Test
+//    Karate runBooking() {
+//        return Karate.run("classpath:api/booking");
+//    }
+//
+//    /**
+//     * Executes specific functional features related to the Posts module.
+//     */
+//    @Karate.Test
+//    Karate runPosts() {
+//        return Karate.run("classpath:api/posts");
+//    }
 }
