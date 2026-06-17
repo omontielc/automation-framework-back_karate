@@ -21,7 +21,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   capture_pageview:false,
   api_transport:'sendBeacon',
   loaded: function(posthog) { 
-    posthog.capture("report_feature",{distinct_id:"738832bb-a36e-4544-b4d3-f0c318a136d4",karate_version:"1.4.0",karate_meta:null});
+    posthog.capture("report_feature",{distinct_id:"a570b1c7-e267-4cf5-a05c-cfb1c783ba3e",karate_version:"1.4.0",karate_meta:null});
   }
 });
 </script>
@@ -38,8 +38,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">5</div>
-      <div id="nav-fail" class="bg-danger">2</div>
+      <div id="nav-pass" class="bg-success">7</div>
+      <div id="nav-fail" class="bg-danger">0</div>
     </div>
   </div>
   <div id="nav-env">
@@ -49,7 +49,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2026-06-17 02:34:01 AM</div>
+    <div>2026-06-17 02:49:11 AM</div>
   </div>
 </div>
 
@@ -63,17 +63,17 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <div class="nav-item passed">
             <a href="#[3:56]"><span>[3:56]</span> <span>TC03 - GET /posts/{invalidId} should return 404 Not Found</span></a>
           </div>
-          <div class="nav-item failed">
+          <div class="nav-item passed">
             <a href="#[4:71]"><span>[4:71]</span> <span>TC04 - POST /posts should create a new resource and return 201 Created</span></a>
           </div>
-          <div class="nav-item failed">
-            <a href="#[5:95]"><span>[5:95]</span> <span>TC05 - PUT /posts/{id} should fully update the target resource</span></a>
+          <div class="nav-item passed">
+            <a href="#[5:94]"><span>[5:94]</span> <span>TC05 - PUT /posts/{id} should fully update the target resource</span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[6:120]"><span>[6:120]</span> <span>TC06 - DELETE /posts/{id} should delete the resource and return 200 OK</span></a>
+            <a href="#[6:118]"><span>[6:118]</span> <span>TC06 - DELETE /posts/{id} should delete the resource and return 200 OK</span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[7:134]"><span>[7:134]</span> <span>TC07 - GET /posts/{id} should match the defined JSON schema structure</span></a>
+            <a href="#[7:132]"><span>[7:132]</span> <span>TC07 - GET /posts/{id} should match the defined JSON schema structure</span></a>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>28</span>
+              <span>ms:</span>&nbsp;<span>33</span>
             </div>
           </div>
           <div class="step-row">
@@ -138,7 +138,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.12">02:34:01.355 Active environment: QA 
+  <div class="preformatted" data-parent="0.12">02:49:11.060 Active environment: QA 
 </div>   
 
   
@@ -214,7 +214,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">26</div>
+    <div class="time-cell passed">30</div>
   </div>
 
    
@@ -223,7 +223,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.24">02:34:01.359 request:
+  <div class="preformatted" data-parent="0.24">02:49:11.063 request:
 1 &gt; GET https://jsonplaceholder.typicode.com/posts/1
 1 &gt; Content-Type: application/json
 1 &gt; Accept: application/json
@@ -233,9 +233,9 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-02:34:01.383 response time in milliseconds: 23
+02:49:11.092 response time in milliseconds: 28
 1 &lt; 200
-1 &lt; Date: Wed, 17 Jun 2026 02:34:01 GMT
+1 &lt; Date: Wed, 17 Jun 2026 02:49:11 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
@@ -256,9 +256,9 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &lt; x-ratelimit-limit: 1000
 1 &lt; x-ratelimit-remaining: 0
 1 &lt; x-ratelimit-reset: 1778159036
-1 &lt; Age: 1284
+1 &lt; Age: 2193
 1 &lt; cf-cache-status: HIT
-1 &lt; CF-RAY: a0cea71e98d4356c-IAD
+1 &lt; CF-RAY: a0cebd543af881c9-IAD
 1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
 {
   &quot;userId&quot;: 1,
@@ -399,7 +399,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>37</span>
+              <span>ms:</span>&nbsp;<span>33</span>
             </div>
           </div>
           <div class="step-row">
@@ -429,7 +429,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def td = read(&#39;classpath:support/testdata-posts.json&#39;).ATC01_ApiOne</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -438,7 +438,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.12">02:34:01.389 Active environment: QA 
+  <div class="preformatted" data-parent="0.12">02:49:11.099 Active environment: QA 
 </div>   
 
   
@@ -551,7 +551,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.43">02:34:01.392 request:
+  <div class="preformatted" data-parent="0.43">02:49:11.102 request:
 1 &gt; GET https://jsonplaceholder.typicode.com/posts?userId=1
 1 &gt; Content-Type: application/json
 1 &gt; Accept: application/json
@@ -561,9 +561,9 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-02:34:01.417 response time in milliseconds: 24
+02:49:11.128 response time in milliseconds: 25
 1 &lt; 200
-1 &lt; Date: Wed, 17 Jun 2026 02:34:01 GMT
+1 &lt; Date: Wed, 17 Jun 2026 02:49:11 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
@@ -583,9 +583,9 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &lt; x-ratelimit-limit: 1000
 1 &lt; x-ratelimit-remaining: 995
 1 &lt; x-ratelimit-reset: 1781312624
-1 &lt; Age: 3995
+1 &lt; Age: 4904
 1 &lt; cf-cache-status: HIT
-1 &lt; CF-RAY: a0cea71ecdffd67b-IAD
+1 &lt; CF-RAY: a0cebd547e90d962-IAD
 1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
 [
   {
@@ -697,7 +697,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>match response == &#39;#[_ &gt; 0]&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">4</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -725,7 +725,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>match each response == { userId: &#39;#(td.UserId)&#39;, id: &#39;#number&#39;, title: &#39;#string&#39;, body: &#39;#string&#39; }</span>
       </div>
     </div>
-    <div class="time-cell passed">5</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -754,7 +754,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>30</span>
+              <span>ms:</span>&nbsp;<span>26</span>
             </div>
           </div>
           <div class="step-row">
@@ -784,7 +784,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def td = read(&#39;classpath:support/testdata-posts.json&#39;).ATC01_ApiOne</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -793,7 +793,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.12">02:34:01.435 Active environment: QA 
+  <div class="preformatted" data-parent="0.12">02:49:11.139 Active environment: QA 
 </div>   
 
   
@@ -841,7 +841,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>path postsEndpoint, td.Id_2</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -869,7 +869,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">29</div>
+    <div class="time-cell passed">25</div>
   </div>
 
    
@@ -878,7 +878,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.60">02:34:01.438 request:
+  <div class="preformatted" data-parent="0.60">02:49:11.141 request:
 1 &gt; GET https://jsonplaceholder.typicode.com/posts/9999
 1 &gt; Content-Type: application/json
 1 &gt; Accept: application/json
@@ -888,9 +888,9 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-02:34:01.466 response time in milliseconds: 24
+02:49:11.165 response time in milliseconds: 24
 1 &lt; 404
-1 &lt; Date: Wed, 17 Jun 2026 02:34:01 GMT
+1 &lt; Date: Wed, 17 Jun 2026 02:49:11 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Content-Length: 2
 1 &lt; Connection: keep-alive
@@ -910,9 +910,9 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &lt; x-ratelimit-limit: 1000
 1 &lt; x-ratelimit-remaining: 994
 1 &lt; x-ratelimit-reset: 1781636591
-1 &lt; Age: 27071
+1 &lt; Age: 27981
 1 &lt; cf-cache-status: HIT
-1 &lt; CF-RAY: a0cea71f1dda3126-IAD
+1 &lt; CF-RAY: a0cebd54bd930cef-IAD
 1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
 {}
 
@@ -963,8 +963,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>2</span>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>35</span>
             </div>
           </div>
           <div class="step-row">
@@ -1003,7 +1003,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.12">02:34:01.475 Active environment: QA 
+  <div class="preformatted" data-parent="0.12">02:49:11.170 Active environment: QA 
 </div>   
 
   
@@ -1073,56 +1073,18 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.75">
-      <div class="step-ref failed">75</div>
+      <div class="step-ref passed">75</div>
       
-      <div class="step-cell failed">
-        <span>And</span>&nbsp;<span>header Content-Type = contentType</span>
-      </div>
-    </div>
-    <div class="time-cell failed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.75">02:34:01.478 classpath:api/posts/ATC01_Posts.feature:75
-And header Content-Type = contentType
-js failed:
-&gt;&gt;&gt;&gt;
-01: contentType
-&lt;&lt;&lt;&lt;
-org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;contentType&quot; is not defined
-- &lt;js&gt;.:program(Unnamed:1)
-
-classpath:api/posts/ATC01_Posts.feature:75
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.76">
-      <div class="step-ref skipped">76</div>
-      
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>request</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
   
-  <div class="preformatted" data-parent="0.76">{
+  <div class="preformatted" data-parent="0.75">{
   &quot;title&quot;:  &quot;My first automated post&quot;,
   &quot;body&quot;:   &quot;This is the post body&quot;,
   &quot;userId&quot;: #(td.UserId)
@@ -1142,14 +1104,87 @@ classpath:api/posts/ATC01_Posts.feature:75
   
 
   <div class="step-row">
-    <div class="step-container" id="0.84">
-      <div class="step-ref skipped">84</div>
+    <div class="step-container" id="0.83">
+      <div class="step-ref passed">83</div>
       
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method POST</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">34</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.83">02:49:11.173 request:
+1 &gt; POST https://jsonplaceholder.typicode.com/posts
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Accept: application/json
+1 &gt; Content-Length: 77
+1 &gt; Host: jsonplaceholder.typicode.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.19)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;title&quot;:&quot;My first automated post&quot;,&quot;body&quot;:&quot;This is the post body&quot;,&quot;userId&quot;:1}
+
+02:49:11.205 response time in milliseconds: 31
+1 &lt; 201
+1 &lt; Date: Wed, 17 Jun 2026 02:49:11 GMT
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 103
+1 &lt; Connection: keep-alive
+1 &lt; access-control-allow-credentials: true
+1 &lt; access-control-expose-headers: Location
+1 &lt; Cache-Control: no-cache
+1 &lt; etag: W/&quot;67-8wcnfpFwxIly4fPkkbpVWCgGW5c&quot;
+1 &lt; expires: -1
+1 &lt; location: https://jsonplaceholder.typicode.com/posts/101
+1 &lt; nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}
+1 &lt; pragma: no-cache
+1 &lt; report-to: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=s7PFtdQrxoIXFYyJc81VfohgtdLJDuEJqOgqy1dpWck%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1781664551&quot;}],&quot;max_age&quot;:3600}
+1 &lt; reporting-endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=s7PFtdQrxoIXFYyJc81VfohgtdLJDuEJqOgqy1dpWck%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1781664551&quot;
+1 &lt; Server: cloudflare
+1 &lt; vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+1 &lt; via: 2.0 heroku-router
+1 &lt; x-content-type-options: nosniff
+1 &lt; x-powered-by: Express
+1 &lt; x-ratelimit-limit: 1000
+1 &lt; x-ratelimit-remaining: 997
+1 &lt; x-ratelimit-reset: 1781664611
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; CF-RAY: a0cebd54eea0d6fc-IAD
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{
+  &quot;title&quot;: &quot;My first automated post&quot;,
+  &quot;body&quot;: &quot;This is the post body&quot;,
+  &quot;userId&quot;: 1,
+  &quot;id&quot;: 101
+}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.84">
+      <div class="step-ref passed">84</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -1171,41 +1206,13 @@ classpath:api/posts/ATC01_Posts.feature:75
 
   <div class="step-row">
     <div class="step-container" id="0.85">
-      <div class="step-ref skipped">85</div>
+      <div class="step-ref passed">85</div>
       
-      <div class="step-cell skipped">
-        <span>Then</span>&nbsp;<span>status 201</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.86">
-      <div class="step-ref skipped">86</div>
-      
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response.id != null</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -1222,29 +1229,29 @@ classpath:api/posts/ATC01_Posts.feature:75
 </div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[5:95]">
+          <div class="scenario-heading" id="[5:94]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">TC05</a><a class="badge badge-primary" href="karate-tags.html">NORMAL</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[5:95]</span>
+                Scenario: <span>[5:94]</span>
                 <span class="scenario-name">TC05 - PUT /posts/{id} should fully update the target resource</span>
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>1</span>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>37</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[5:95]bg">
+            <div class="step-container" id="[5:94]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[5:95]bg"><div>
+          <div data-parent="[5:94]bg"><div>
   
 
   <div class="step-row">
@@ -1273,8 +1280,36 @@ classpath:api/posts/ATC01_Posts.feature:75
 
   
 
-  <div class="preformatted" data-parent="0.12">02:34:01.483 Active environment: QA 
+  <div class="preformatted" data-parent="0.12">02:49:11.212 Active environment: QA 
 </div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.96">
+      <div class="step-ref passed">96</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url apiOneBaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
 
   
 
@@ -1290,7 +1325,7 @@ classpath:api/posts/ATC01_Posts.feature:75
       <div class="step-ref passed">97</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>url apiOneBaseUrl</span>
+        <span>And</span>&nbsp;<span>path postsEndpoint, td.Id</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -1318,7 +1353,110 @@ classpath:api/posts/ATC01_Posts.feature:75
       <div class="step-ref passed">98</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path postsEndpoint, td.Id</span>
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.98">{
+  &quot;title&quot;:  &quot;Updated title&quot;,
+  &quot;body&quot;:   &quot;Updated body&quot;,
+  &quot;userId&quot;: #(td.UserId)
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.106">
+      <div class="step-ref passed">106</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method PUT</span>
+      </div>
+    </div>
+    <div class="time-cell passed">35</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.106">02:49:11.216 request:
+1 &gt; PUT https://jsonplaceholder.typicode.com/posts/1
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Accept: application/json
+1 &gt; Content-Length: 58
+1 &gt; Host: jsonplaceholder.typicode.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.19)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;title&quot;:&quot;Updated title&quot;,&quot;body&quot;:&quot;Updated body&quot;,&quot;userId&quot;:1}
+
+02:49:11.249 response time in milliseconds: 32
+1 &lt; 200
+1 &lt; Date: Wed, 17 Jun 2026 02:49:11 GMT
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; access-control-allow-credentials: true
+1 &lt; Cache-Control: no-cache
+1 &lt; etag: W/&quot;52-52qV1cCfob34NBZXA+8dYbuU20M&quot;
+1 &lt; expires: -1
+1 &lt; nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}
+1 &lt; pragma: no-cache
+1 &lt; report-to: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=s7PFtdQrxoIXFYyJc81VfohgtdLJDuEJqOgqy1dpWck%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1781664551&quot;}],&quot;max_age&quot;:3600}
+1 &lt; reporting-endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=s7PFtdQrxoIXFYyJc81VfohgtdLJDuEJqOgqy1dpWck%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1781664551&quot;
+1 &lt; Server: cloudflare
+1 &lt; vary: Origin, Accept-Encoding
+1 &lt; via: 2.0 heroku-router
+1 &lt; x-content-type-options: nosniff
+1 &lt; x-powered-by: Express
+1 &lt; x-ratelimit-limit: 1000
+1 &lt; x-ratelimit-remaining: 996
+1 &lt; x-ratelimit-reset: 1781664611
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; CF-RAY: a0cebd553fa06ff2-IAD
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{
+  &quot;title&quot;: &quot;Updated title&quot;,
+  &quot;body&quot;: &quot;Updated body&quot;,
+  &quot;userId&quot;: 1,
+  &quot;id&quot;: 1
+}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.107">
+      <div class="step-ref passed">107</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -1342,84 +1480,14 @@ classpath:api/posts/ATC01_Posts.feature:75
   
 
   <div class="step-row">
-    <div class="step-container" id="0.99">
-      <div class="step-ref failed">99</div>
-      
-      <div class="step-cell failed">
-        <span>And</span>&nbsp;<span>header Content-Type = contentType</span>
-      </div>
-    </div>
-    <div class="time-cell failed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.99">02:34:01.486 classpath:api/posts/ATC01_Posts.feature:99
-And header Content-Type = contentType
-js failed:
-&gt;&gt;&gt;&gt;
-01: contentType
-&lt;&lt;&lt;&lt;
-org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;contentType&quot; is not defined
-- &lt;js&gt;.:program(Unnamed:1)
-
-classpath:api/posts/ATC01_Posts.feature:99
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.100">
-      <div class="step-ref skipped">100</div>
-      
-      <div class="step-cell skipped">
-        <span>And</span>&nbsp;<span>request</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  <div class="preformatted" data-parent="0.100">{
-  &quot;title&quot;:  &quot;Updated title&quot;,
-  &quot;body&quot;:   &quot;Updated body&quot;,
-  &quot;userId&quot;: #(td.UserId)
-}</div>
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
     <div class="step-container" id="0.108">
-      <div class="step-ref skipped">108</div>
+      <div class="step-ref passed">108</div>
       
-      <div class="step-cell skipped">
-        <span>When</span>&nbsp;<span>method PUT</span>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.id    == td.Id</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -1441,69 +1509,13 @@ classpath:api/posts/ATC01_Posts.feature:99
 
   <div class="step-row">
     <div class="step-container" id="0.109">
-      <div class="step-ref skipped">109</div>
+      <div class="step-ref passed">109</div>
       
-      <div class="step-cell skipped">
-        <span>Then</span>&nbsp;<span>status 200</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.110">
-      <div class="step-ref skipped">110</div>
-      
-      <div class="step-cell skipped">
-        <span>And</span>&nbsp;<span>match response.id    == td.Id</span>
-      </div>
-    </div>
-    <div class="time-cell skipped">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.111">
-      <div class="step-ref skipped">111</div>
-      
-      <div class="step-cell skipped">
+      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response.title == &#39;Updated title&#39;</span>
       </div>
     </div>
-    <div class="time-cell skipped">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1520,29 +1532,29 @@ classpath:api/posts/ATC01_Posts.feature:99
 </div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[6:120]">
+          <div class="scenario-heading" id="[6:118]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">TC06</a><a class="badge badge-primary" href="karate-tags.html">NORMAL</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[6:120]</span>
+                Scenario: <span>[6:118]</span>
                 <span class="scenario-name">TC06 - DELETE /posts/{id} should delete the resource and return 200 OK</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>34</span>
+              <span>ms:</span>&nbsp;<span>28</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[6:120]bg">
+            <div class="step-container" id="[6:118]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[6:120]bg"><div>
+          <div data-parent="[6:118]bg"><div>
   
 
   <div class="step-row">
@@ -1571,8 +1583,64 @@ classpath:api/posts/ATC01_Posts.feature:99
 
   
 
-  <div class="preformatted" data-parent="0.12">02:34:01.490 Active environment: QA 
+  <div class="preformatted" data-parent="0.12">02:49:11.260 Active environment: QA 
 </div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.120">
+      <div class="step-ref passed">120</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url apiOneBaseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.121">
+      <div class="step-ref passed">121</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path postsEndpoint, td.Id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
 
   
 
@@ -1588,66 +1656,10 @@ classpath:api/posts/ATC01_Posts.feature:99
       <div class="step-ref passed">122</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>url apiOneBaseUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.123">
-      <div class="step-ref passed">123</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>path postsEndpoint, td.Id</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.124">
-      <div class="step-ref passed">124</div>
-      
-      <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method DELETE</span>
       </div>
     </div>
-    <div class="time-cell passed">33</div>
+    <div class="time-cell passed">28</div>
   </div>
 
    
@@ -1656,7 +1668,7 @@ classpath:api/posts/ATC01_Posts.feature:99
 
   
 
-  <div class="preformatted" data-parent="0.124">02:34:01.493 request:
+  <div class="preformatted" data-parent="0.122">02:49:11.262 request:
 1 &gt; DELETE https://jsonplaceholder.typicode.com/posts/1
 1 &gt; Content-Type: application/json
 1 &gt; Accept: application/json
@@ -1666,9 +1678,9 @@ classpath:api/posts/ATC01_Posts.feature:99
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-02:34:01.525 response time in milliseconds: 31
+02:49:11.288 response time in milliseconds: 26
 1 &lt; 200
-1 &lt; Date: Wed, 17 Jun 2026 02:34:01 GMT
+1 &lt; Date: Wed, 17 Jun 2026 02:49:11 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Content-Length: 2
 1 &lt; Connection: keep-alive
@@ -1678,18 +1690,18 @@ classpath:api/posts/ATC01_Posts.feature:99
 1 &lt; expires: -1
 1 &lt; nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}
 1 &lt; pragma: no-cache
-1 &lt; report-to: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=zk5ifpsIwcTp4j3Q2AX2RvJqd6Wpxo5j1VbcXBvI1iQ%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1781663641&quot;}],&quot;max_age&quot;:3600}
-1 &lt; reporting-endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=zk5ifpsIwcTp4j3Q2AX2RvJqd6Wpxo5j1VbcXBvI1iQ%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1781663641&quot;
+1 &lt; report-to: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=s7PFtdQrxoIXFYyJc81VfohgtdLJDuEJqOgqy1dpWck%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1781664551&quot;}],&quot;max_age&quot;:3600}
+1 &lt; reporting-endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=s7PFtdQrxoIXFYyJc81VfohgtdLJDuEJqOgqy1dpWck%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1781664551&quot;
 1 &lt; Server: cloudflare
 1 &lt; vary: Origin, Accept-Encoding
 1 &lt; via: 2.0 heroku-router
 1 &lt; x-content-type-options: nosniff
 1 &lt; x-powered-by: Express
 1 &lt; x-ratelimit-limit: 1000
-1 &lt; x-ratelimit-remaining: 998
-1 &lt; x-ratelimit-reset: 1781663651
+1 &lt; x-ratelimit-remaining: 995
+1 &lt; x-ratelimit-reset: 1781664611
 1 &lt; cf-cache-status: DYNAMIC
-1 &lt; CF-RAY: a0cea71f6f2e8021-IAD
+1 &lt; CF-RAY: a0cebd557b5c186e-IAD
 1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
 {}
 
@@ -1705,8 +1717,8 @@ classpath:api/posts/ATC01_Posts.feature:99
   
 
   <div class="step-row">
-    <div class="step-container" id="0.125">
-      <div class="step-ref passed">125</div>
+    <div class="step-container" id="0.123">
+      <div class="step-ref passed">123</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -1729,29 +1741,29 @@ classpath:api/posts/ATC01_Posts.feature:99
 </div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[7:134]">
+          <div class="scenario-heading" id="[7:132]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">TC07</a><a class="badge badge-primary" href="karate-tags.html">CRITICAL</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[7:134]</span>
+                Scenario: <span>[7:132]</span>
                 <span class="scenario-name">TC07 - GET /posts/{id} should match the defined JSON schema structure</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>30</span>
+              <span>ms:</span>&nbsp;<span>23</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[7:134]bg">
+            <div class="step-container" id="[7:132]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[7:134]bg"><div>
+          <div data-parent="[7:132]bg"><div>
   
 
   <div class="step-row">
@@ -1771,7 +1783,7 @@ classpath:api/posts/ATC01_Posts.feature:99
         <span>*</span>&nbsp;<span>def td = read(&#39;classpath:support/testdata-posts.json&#39;).ATC01_ApiOne</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -1780,7 +1792,7 @@ classpath:api/posts/ATC01_Posts.feature:99
 
   
 
-  <div class="preformatted" data-parent="0.12">02:34:01.531 Active environment: QA 
+  <div class="preformatted" data-parent="0.12">02:49:11.293 Active environment: QA 
 </div>   
 
   
@@ -1793,8 +1805,8 @@ classpath:api/posts/ATC01_Posts.feature:99
   
 
   <div class="step-row">
-    <div class="step-container" id="0.136">
-      <div class="step-ref passed">136</div>
+    <div class="step-container" id="0.134">
+      <div class="step-ref passed">134</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>url apiOneBaseUrl</span>
@@ -1821,8 +1833,8 @@ classpath:api/posts/ATC01_Posts.feature:99
   
 
   <div class="step-row">
-    <div class="step-container" id="0.137">
-      <div class="step-ref passed">137</div>
+    <div class="step-container" id="0.135">
+      <div class="step-ref passed">135</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>path postsEndpoint, td.Id</span>
@@ -1849,14 +1861,14 @@ classpath:api/posts/ATC01_Posts.feature:99
   
 
   <div class="step-row">
-    <div class="step-container" id="0.138">
-      <div class="step-ref passed">138</div>
+    <div class="step-container" id="0.136">
+      <div class="step-ref passed">136</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">29</div>
+    <div class="time-cell passed">23</div>
   </div>
 
    
@@ -1865,7 +1877,7 @@ classpath:api/posts/ATC01_Posts.feature:99
 
   
 
-  <div class="preformatted" data-parent="0.138">02:34:01.535 request:
+  <div class="preformatted" data-parent="0.136">02:49:11.295 request:
 1 &gt; GET https://jsonplaceholder.typicode.com/posts/1
 1 &gt; Content-Type: application/json
 1 &gt; Accept: application/json
@@ -1875,9 +1887,9 @@ classpath:api/posts/ATC01_Posts.feature:99
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-02:34:01.562 response time in milliseconds: 26
+02:49:11.316 response time in milliseconds: 21
 1 &lt; 200
-1 &lt; Date: Wed, 17 Jun 2026 02:34:01 GMT
+1 &lt; Date: Wed, 17 Jun 2026 02:49:11 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
@@ -1898,9 +1910,9 @@ classpath:api/posts/ATC01_Posts.feature:99
 1 &lt; x-ratelimit-limit: 1000
 1 &lt; x-ratelimit-remaining: 0
 1 &lt; x-ratelimit-reset: 1778159036
-1 &lt; Age: 1284
+1 &lt; Age: 2194
 1 &lt; cf-cache-status: HIT
-1 &lt; CF-RAY: a0cea71fbf8e4b11-IAD
+1 &lt; CF-RAY: a0cebd55a9f7e621-IAD
 1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
 {
   &quot;userId&quot;: 1,
@@ -1921,8 +1933,8 @@ classpath:api/posts/ATC01_Posts.feature:99
   
 
   <div class="step-row">
-    <div class="step-container" id="0.139">
-      <div class="step-ref passed">139</div>
+    <div class="step-container" id="0.137">
+      <div class="step-ref passed">137</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -1956,8 +1968,8 @@ classpath:api/posts/ATC01_Posts.feature:99
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.142">
-      <div class="step-ref passed">142</div>
+    <div class="step-container" id="0.140">
+      <div class="step-ref passed">140</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response ==</span>
@@ -1968,7 +1980,7 @@ classpath:api/posts/ATC01_Posts.feature:99
 
    
   
-  <div class="preformatted" data-parent="0.142">{
+  <div class="preformatted" data-parent="0.140">{
   &quot;userId&quot;: &#39;#number&#39;,
   &quot;id&quot;:     &#39;#number&#39;,
   &quot;title&quot;:  &#39;#string&#39;,
