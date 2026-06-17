@@ -5,7 +5,7 @@ target/
 .idea/
 *.iml
 *.iws
-*.ipr
+*.i
 
 # Mac OS system files
 .DS_Store

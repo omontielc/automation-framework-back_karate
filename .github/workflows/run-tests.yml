@@ -1,5 +1,21 @@
+# =============================================================
+# run-tests.yml
+#
+# GitHub Actions workflow for the Karate API Automation Framework.
+# Triggers on every push or pull request to main branch.
+# Executes all Karate tests and publishes the native HTML report
+# to GitHub Pages for easy access after each run.
+#
+# @author Osiris Montiel Campos
+# =============================================================
 name: Karate API Automation Tests
 
+# =============================================================
+# Trigger events
+# push/pull_request: runs automatically on code changes
+# workflow_dispatch: allows manual execution from GitHub UI
+#                   with environment selection
+# =============================================================
 on:
   push:
     branches: [ main ]
@@ -8,95 +24,59 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Ambiente donde ejecutar los tests'
+        description: 'Target environment for test execution'
         required: true
         default: 'QA'
         type: choice
         options:
           - QA
           - DEV
-          - STAGING
 
 jobs:
   run-tests:
-    name: Ejecutar Tests Karate
+    name: Run Karate API Tests
     runs-on: ubuntu-latest
+
+    # Required to allow publishing the report to GitHub Pages
     permissions:
       contents: write
 
     steps:
 
-      # Step 1 — Descargar el código del repositorio
-      - name: Checkout code
+      # Step 1 — Check out the repository code into the runner
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Step 2 — Instalar Java 17
+      # Step 2 — Set up Java 17 (required by Karate 1.4.0)
       - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
 
-      # Step 3 — Cache de dependencias Maven para acelerar ejecuciones
-      - name: Cache Maven packages
+      # Step 3 — Cache Maven dependencies to speed up subsequent runs
+      # Cache key changes only when pom.xml is modified
+      - name: Cache Maven dependencies
         uses: actions/cache@v4
         with:
           path: ~/.m2
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-maven-
 
-      # Step 4 — Pre-descargar dependencias (necesario para aspectjweaver)
-      - name: Download dependencies
+      # Step 4 — Download all project dependencies before running tests
+      - name: Download Maven dependencies
         run: mvn dependency:resolve -q
 
-      # Step 5 — Ejecutar todos los tests Karate
-      # El ambiente se pasa como system property — karate-config.js lo lee con karate.env
-      - name: Run Karate Tests
+      # Step 5 — Execute all Karate feature files
+      # karate.env is read by karate-config.js to load the correct base URLs
+      # Defaults to QA if no environment is selected manually
+      - name: Run Karate tests
         run: mvn clean test -Dkarate.env=${{ github.event.inputs.environment || 'QA' }}
 
-      # Step 6 — Escribir metadata de ambiente para Allure (igual que tu framework)
-      - name: Create Allure environment file
-        if: always()
-        run: |
-          mkdir -p target/allure-results
-          cat > target/allure-results/environment.properties << EOF
-          Environment=${{ github.event.inputs.environment || 'QA' }}
-          Base.URL.Booking=https://restful-booker.herokuapp.com
-          Base.URL.Posts=https://jsonplaceholder.typicode.com
-          Framework=Karate DSL Automation Framework
-          Author=Osiris Montiel Campos
-          Java.Version=17
-          Karate.Version=1.4.1
-          OS=Ubuntu (GitHub Actions)
-          Triggered.By=${{ github.actor }}
-          Trigger=${{ github.event_name }}
-          EOF
-
-      # Step 7 — Generar el reporte HTML de Allure
-      - name: Generate Allure Report
-        if: always()
-        run: mvn allure:report
-
-      # Step 8 — Subir reporte Allure como artefacto descargable
-      - name: Upload Allure Report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-report
-          path: target/site/allure-maven-plugin/
-          retention-days: 30
-
-      # Step 9 — Subir resultados raw de Allure
-      - name: Upload Allure Results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-results
-          path: target/allure-results/
-          retention-days: 30
-
-      # Step 10 — Subir reporte HTML nativo de Karate
-      - name: Upload Karate HTML Report
+      # Step 6 — Upload the native Karate HTML report as a downloadable artifact
+      # Report is generated automatically in target/karate-reports after every run
+      # if: always() ensures the report is uploaded even if tests fail
+      - name: Upload Karate HTML report
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -104,10 +84,12 @@ jobs:
           path: target/karate-reports/
           retention-days: 30
 
-      # Step 11 — Deploy a GitHub Pages (solo en push a main)
-      - name: Deploy Allure Report to GitHub Pages
+      # Step 7 — Publish the Karate report to GitHub Pages
+      # Only runs on push to main branch, not on pull requests
+      # Report will be available at: https://omontielc.github.io/automation-framework-back-karate
+      - name: Deploy report to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: target/site/allure-maven-plugin/
+          publish_dir: target/karate-reports/
