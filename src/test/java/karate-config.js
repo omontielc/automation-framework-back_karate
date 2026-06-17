@@ -3,6 +3,7 @@
  *
  * Global configuration file automatically loaded by Karate before any test execution.
  * Defines base URLs, endpoints, timeouts, and global HTTP headers
+ * available as variables across all feature files.
  *
  * @author Osiris Montiel Campos
  */
@@ -41,8 +42,11 @@ function fn() {
     // Environment overrides
     // Swap base URLs depending on the active environment
     // =========================================================
-    if (env === 'dev') {
+    if (env === 'DEV') {
         config.bookingBaseUrl = 'https://dev.restful-booker.com';
+    }
+    if (env === 'STAGING') {
+        config.bookingBaseUrl = 'https://staging.restful-booker.com';
     }
 
     // =========================================================

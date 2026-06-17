@@ -10,12 +10,6 @@
 # =============================================================
 name: Karate API Automation Tests
 
-# =============================================================
-# Trigger events
-# push/pull_request: runs automatically on code changes
-# workflow_dispatch: allows manual execution from GitHub UI
-#                   with environment selection
-# =============================================================
 on:
   push:
     branches: [ main ]
@@ -31,6 +25,11 @@ on:
         options:
           - QA
           - DEV
+          - STAGING
+      tags:
+        description: 'Run specific tag (e.g. @TC01, @CRITICAL) — leave empty to run all'
+        required: false
+        default: ''
 
 jobs:
   run-tests:
@@ -67,14 +66,20 @@ jobs:
       - name: Download Maven dependencies
         run: mvn dependency:resolve -q
 
-      # Step 5 — Execute all Karate feature files
+      # Step 5 — Execute all Karate tests
       # karate.env is read by karate-config.js to load the correct base URLs
-      # Defaults to QA if no environment is selected manually
-      - name: Run Karate tests
-        run: mvn clean test -Dkarate.env=${{ github.event.inputs.environment || 'QA' }}
+      # -Dmaven.test.failure.ignore=true prevents workflow from failing on test failures
+      # so the report upload steps always execute
+      - name: Run Karate tests — all scenarios
+        if: github.event.inputs.tags == '' || github.event_name != 'workflow_dispatch'
+        run: mvn clean test -Dkarate.env=${{ github.event.inputs.environment || 'QA' }} -Dmaven.test.failure.ignore=true
+
+      # Step 5b — Execute only scenarios matching the selected tag (manual runs only)
+      - name: Run Karate tests — filtered by tag
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.tags != ''
+        run: mvn clean test -Dkarate.env=${{ github.event.inputs.environment }} -Dkarate.options="--tags ${{ github.event.inputs.tags }}" -Dmaven.test.failure.ignore=true
 
       # Step 6 — Upload the native Karate HTML report as a downloadable artifact
-      # Report is generated automatically in target/karate-reports after every run
       # if: always() ensures the report is uploaded even if tests fail
       - name: Upload Karate HTML report
         if: always()
@@ -85,8 +90,8 @@ jobs:
           retention-days: 30
 
       # Step 7 — Publish the Karate report to GitHub Pages
-      # Only runs on push to main branch, not on pull requests
-      # Report will be available at: https://omontielc.github.io/automation-framework-back-karate
+      # Only runs on push to main, not on pull requests
+      # Report available at: https://omontielc.github.io/automation-framework-back-karate
       - name: Deploy report to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
