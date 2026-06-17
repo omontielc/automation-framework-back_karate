@@ -72,7 +72,6 @@ Feature: API Posts — CRUD Operations and Schema Validation
 
     Given url apiOneBaseUrl
     And path postsEndpoint
-    And header Content-Type = contentType
     And request
       """
       {
@@ -96,7 +95,6 @@ Feature: API Posts — CRUD Operations and Schema Validation
 
     Given url apiOneBaseUrl
     And path postsEndpoint, td.Id
-    And header Content-Type = contentType
     And request
       """
       {
